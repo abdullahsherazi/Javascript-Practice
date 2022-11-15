@@ -1,0 +1,23 @@
+function smallestCommons(arr) {
+  let range = arr.sort((a,b)=> {return a-b;})
+
+  let startingNumber = range[0];
+  let validNumber  = range[0]+1;
+
+  console.log("starting Number: "+ startingNumber);
+  console.log("Ending Number: "+ range[1]);
+
+  while(startingNumber <= range[1]){     
+     if(validNumber%startingNumber===0){
+        startingNumber++;
+     } 
+     else{
+       validNumber++;
+       startingNumber=range[0];
+     }   
+  } 
+  
+  return validNumber;
+}
+
+smallestCommons([1,5]);

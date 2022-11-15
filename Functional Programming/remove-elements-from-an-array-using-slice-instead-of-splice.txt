@@ -1,0 +1,10 @@
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+  let l=cities.slice(0,3)
+  console.log(l)
+  return l;
+
+  // Only change code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);

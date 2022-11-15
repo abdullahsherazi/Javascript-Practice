@@ -1,0 +1,14 @@
+function truthCheck(collection, pre) {
+  for(let eachObject of collection){
+    if(!eachObject.hasOwnProperty(pre))
+      return false;
+    
+  if(eachObject[pre]===null || eachObject[pre]===0 ||       eachObject[pre] === "" || eachObject[pre] ===  undefined || Number.isNaN(eachObject[pre])){
+      return false;
+    }
+  }
+  return true;
+}
+
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");

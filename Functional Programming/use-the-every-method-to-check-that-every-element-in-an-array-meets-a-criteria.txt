@@ -1,0 +1,15 @@
+function checkPositive(arr) {
+  // Only change code below this line
+  let k=true;
+  console.log(arr)
+k=arr.every((currentValue)=> {
+  console.log(currentValue > 0)
+  return currentValue > 0;
+});
+
+console.log(k)
+return k
+
+  // Only change code above this line
+}
+checkPositive([1, 2, 3, 5]);

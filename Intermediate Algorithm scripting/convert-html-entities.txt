@@ -1,0 +1,20 @@
+function convertHTML(str) {
+  let htmlRepresentation = {
+    '&': "&amp;",
+    '"': "&quot;",
+    ">": "&gt;",
+    "<": "&lt;",
+    "'": "&apos;"
+  }
+
+  let strArray = str.split("");
+  for(let i=0; i<strArray.length;i++){
+    if(htmlRepresentation.hasOwnProperty(strArray[i])){
+      strArray[i] = htmlRepresentation[strArray[i]];
+    }
+  }
+  return strArray.join("");
+}
+
+
+convertHTML("Dolce & Gabbana");

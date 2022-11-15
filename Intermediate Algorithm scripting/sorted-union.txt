@@ -1,0 +1,11 @@
+function uniteUnique(arr, ...args) {
+  let x = new Set(arr);
+
+  for(let arr of args){
+    for(let element of arr){
+      x.add(element);
+    }
+  }
+  return [...x];
+}
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);

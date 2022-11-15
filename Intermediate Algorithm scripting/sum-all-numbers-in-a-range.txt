@@ -1,0 +1,20 @@
+function sumAll(arr) {
+let sum=0;
+if(arr[0]>arr[1]){
+  for(let i=arr[1];i<=arr[0];i++){
+    sum=sum+i
+  }
+}
+else{
+  // console.log(arr[1])
+for(let i=arr[0];i<=arr[1];i++){
+  console.log(arr[i])
+    sum=sum+i
+    console.log(sum)
+  }
+}
+// console.log(sum)
+  return sum;
+}
+
+sumAll([1, 4]);

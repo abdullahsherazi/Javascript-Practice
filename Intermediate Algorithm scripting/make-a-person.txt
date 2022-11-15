@@ -1,0 +1,36 @@
+var Person = function(firstAndLast) 
+{
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  
+  Person.prototype.name= firstAndLast.split(' ');
+  
+  this.getFirstName = ()=> {
+    return this.name[0];
+  }
+
+  this.getLastName = ()=> {
+    return this.name[1];
+  }
+
+  this.getFullName = ()=> {
+    return this.name.join(' ');
+  }
+
+  this.setFirstName = (first)=> {
+    this.name[0] = first;
+  }
+
+  this.setLastName = (last)=> {
+    this.name[1] = last;
+  }
+
+  this.setFullName = (firstAndLast)=> {
+    this.name = firstAndLast.split(' ');
+  }
+};
+
+
+
+var bob = new Person('Bob Ross');
+bob.getFullName();

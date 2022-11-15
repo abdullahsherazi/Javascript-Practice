@@ -1,0 +1,11 @@
+function addTogether(num1, num2) {
+   
+   if (typeof num1 !== "number") {
+    return undefined;
+  }
+  
+  const result = num2 => typeof num2 === "number" ? num1 + num2 : undefined;
+  return typeof num2 === "undefined" ? num2 => result(num2) : result(num2);
+}
+
+addTogether(2,3);

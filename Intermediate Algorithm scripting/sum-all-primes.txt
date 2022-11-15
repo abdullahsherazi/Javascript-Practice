@@ -1,0 +1,26 @@
+function sumPrimes(num) {
+  let i=2;
+  let notPrime = false;
+  let sum=0;
+
+  while(i<=num){
+    let checker= 2;
+    
+    while(checker<i){  
+      if(i%checker===0){
+        notPrime=true;
+        break;
+      }
+      checker++;
+    }
+    
+    if(!notPrime)
+      sum+=i;
+    i++;
+    notPrime=false;
+  }
+
+  return sum;
+}
+
+sumPrimes(10);

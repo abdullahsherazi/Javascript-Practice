@@ -1,0 +1,18 @@
+// Only change code below this line
+function urlSlug(title) {
+let l=title.split(/[" "]/)
+for(let i=0;i<l.length;i++){
+    if(l[i]==""){
+        l.splice(i,1)
+        i--;
+    }
+}
+console.log(l)
+
+l=l.join("-")
+console.log(l)
+return l.toLowerCase()
+}
+// Only change code above this line9-
+
+urlSlug(" Winter Is  Coming")

@@ -1,0 +1,9 @@
+function translatePigLatin(str) {
+  let regex = /^[^aeiou]+/
+  let matched = str.match(regex)
+  if (str.match(regex)){
+    return str.replace(regex, "").concat(matched + "ay");
+  } else{
+    return str.concat("way")
+  }
+}

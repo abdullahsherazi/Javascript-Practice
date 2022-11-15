@@ -1,0 +1,21 @@
+function pairElement(str) {
+  let temp = {
+    "C": "G",
+    "G": "C",
+    "A": "T",
+    "T": "A",
+  }
+  
+  let arr = [];
+  
+  for(let dNA of str){
+    let localArray = [];
+    
+    localArray.push(dNA);
+    localArray.push(temp[dNA]);
+
+    arr.push(localArray);
+  }
+
+  return arr;
+}
